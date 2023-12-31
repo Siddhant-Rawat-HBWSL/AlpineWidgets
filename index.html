@@ -16,21 +16,19 @@
     </style>
   </head>
   <body>
-
     <!-- root div -->
-    <div 
+    <div
       x-data="{
-        glob_opt: 1,
-      }" 
-      class="grid grid-cols-8 gap-4 m-5">
-
+        glob_opt: 2,
+      }"
+      class="grid grid-cols-8 gap-4 m-5"
+    >
       <!-- Sidebar -->
       <div class="col-span-2">
         <h2 class="text-xl m-4 text-center">Widgets</h2>
 
-        <div
-          class="flex flex-col m-4"
-        >
+        <!-- sidebar contents -->
+        <div class="flex flex-col m-4">
           <button x-on:click="glob_opt = 1">Accordion</button>
           <button x-on:click="glob_opt = 2">Autocomplete</button>
           <button x-on:click="glob_opt = 3">Button</button>
@@ -60,99 +58,159 @@
         x-cloak
         class="flex flex-row"
       >
-      <div>
-        <button x-on:click="option = 1" class="min-w-full" >
-          <h2 class="bg-gray-300 text-left">
-            Section 1
-          </h2>
-        </button>
-        <div 
-          x-show="option == 1" 
-          x-transition:enter.duration.500ms
-          x-transition:leave.duration.0ms
-        >
-          <p class="p-4 border border-gray-400">
-            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam.
-            Integer ut neque. Vivamus nisi metus, molestie vel, gravida in,
-            condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi.
-            Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit
-            eu ante scelerisque vulputate.
-          </p>
+        <div>
+          <button x-on:click="option = 1" class="min-w-full">
+            <h2 class="bg-gray-300 text-left">Section 1</h2>
+          </button>
+          <div
+            x-show="option == 1"
+            x-transition:enter.duration.500ms
+            x-transition:leave.duration.0ms
+          >
+            <p class="p-4 border border-gray-400">
+              Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam.
+              Integer ut neque. Vivamus nisi metus, molestie vel, gravida in,
+              condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam
+              mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a
+              velit eu ante scelerisque vulputate.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div>
-        <button x-on:click="option = 2" class="min-w-full" >
-          <h2 class="bg-gray-300 text-left">
-            Section 2
-          </h2>
-        </button>
-        <div  
-          x-show="option == 2"          
-          x-transition:enter.duration.500ms
-          x-transition:leave.duration.0ms
-        >
-          <p class="p-4 border border-gray-400">
-            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit
-            amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris
-            turpis porttitor velit, faucibus interdum tellus libero ac justo.
-            Vivamus non quam. In suscipit faucibus urna.
-          </p>
+        <div>
+          <button x-on:click="option = 2" class="min-w-full">
+            <h2 class="bg-gray-300 text-left">Section 2</h2>
+          </button>
+          <div
+            x-show="option == 2"
+            x-transition:enter.duration.500ms
+            x-transition:leave.duration.0ms
+          >
+            <p class="p-4 border border-gray-400">
+              Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit
+              amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris
+              turpis porttitor velit, faucibus interdum tellus libero ac justo.
+              Vivamus non quam. In suscipit faucibus urna.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div>
-        <button x-on:click="option = 3" class="min-w-full" >
-          <h2 class="bg-gray-300 text-left">
-            Section 3
-          </h2>
-        </button>
-        <div
-         x-show="option == 3"
-         x-transition:enter.duration.500ms
-         x-transition:leave.duration.0ms
-         class="p-4 border border-gray-400"
-        >
-          <p>
-            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque
-            lobortis. Phasellus pellentesque purus in massa. Aenean in pede.
-            Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed
-            commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu
-            iaculis leo purus venenatis dui.
-        
+        <div>
+          <button x-on:click="option = 3" class="min-w-full">
+            <h2 class="bg-gray-300 text-left">Section 3</h2>
+          </button>
+          <div
+            x-show="option == 3"
+            x-transition:enter.duration.500ms
+            x-transition:leave.duration.0ms
+            class="p-4 border border-gray-400"
+          >
+            <p>
+              Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque
+              lobortis. Phasellus pellentesque purus in massa. Aenean in pede.
+              Phasellus ac libero ac tellus pellentesque semper. Sed ac felis.
+              Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu
+              iaculis leo purus venenatis dui.
+            </p>
             <ul>
               <li>List item one</li>
               <li>List item two</li>
               <li>List item three</li>
             </ul>
-          </p>
+          </div>
+        </div>
+
+        <div>
+          <button x-on:click="option = 4" class="min-w-full">
+            <h2 class="bg-gray-300 text-left">Section 4</h2>
+          </button>
+          <div
+            x-show="option == 4"
+            x-transition:enter.duration.500ms
+            x-transition:leave.duration.0ms
+          >
+            <p class="p-4 border border-gray-400">
+              Cras dictum. Pellentesque habitant morbi tristique senectus et
+              netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum
+              primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+              Aenean lacinia mauris vel est. Suspendisse eu nisl. Nullam ut
+              libero. Integer dignissim consequat lectus. Class aptent taciti
+              sociosqu ad litora torquent per conubia nostra, per inceptos
+              himenaeos.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div>
-        <button x-on:click="option = 4" class="min-w-full" >
-          <h2 class="bg-gray-300 text-left">
-            Section 4
-          </h2>
-        </button>
-        <div 
-          x-show="option == 4"
-          x-transition:enter.duration.500ms
-          x-transition:leave.duration.0ms
-        >
-          <p class="p-4 border border-gray-400">
-            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis
-            in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean
-            lacinia mauris vel est.
-         
-            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat
-            lectus. Class aptent taciti sociosqu ad litora torquent per conubia
-            nostra, per inceptos himenaeos.
-          </p>
+      <!-- autocomplete -->
+      <div
+        x-show="glob_opt == 2"
+        x-data="{
+          availableTags: [
+            'ActionScript',
+            'AppleScript',
+            'Asp',
+            'BASIC',
+            'C',
+            'C++',
+            'Clojure',
+            'COBOL',
+            'ColdFusion',
+            'Erlang',
+            'Fortran',
+            'Groovy',
+            'Haskell',
+            'Java',
+            'JavaScript',
+            'Lisp',
+            'Perl',
+            'PHP',
+            'Python',
+            'Ruby',
+            'Scala',
+            'Scheme',
+          ],
+          search: '',
+        }"
+      >
+        <div class="flex gap-2">
+          <label for="tags">Tags: </label>
+          <div>
+            <input
+              x-model="search"
+              type="text"
+              placeholder="Search..."
+              id="tags"
+              style="
+                border-top: 2px solid rgb(232, 232, 232);
+                border-left: 2px solid rgb(232, 232, 232);
+                border-right: 2px solid rgb(232, 232, 232);
+              "
+            />
+            <div x-bind:class="{'border': '2px solid gray'}">
+              <template x-if="search">
+                <template x-for="tag in availableTags">
+                  <p
+                    x-text="onSearch(search, tag)"
+                    class="hover:bg-blue-600 hover:cursor-pointer hover:text-white"
+                    x-on:click="search = tag"
+                  ></p>
+                </template>
+              </template>
+            </div>
+          </div>
         </div>
       </div>
-      </div>
+
+      <!-- button -->
     </div>
+
+    <script>
+
+      // for autocomplete
+      function onSearch(search, tag) {
+        if (tag.toLowerCase().includes(search.toLowerCase())) return tag;
+      }
+    </script>
   </body>
 </html>
