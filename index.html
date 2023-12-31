@@ -19,7 +19,7 @@
     <!-- root div -->
     <div
       x-data="{
-        glob_opt: 2,
+        glob_opt: 3,
       }"
       class="grid grid-cols-8 gap-4 m-5"
     >
@@ -50,13 +50,12 @@
       <!-- accordion -->
       <div
         x-show="glob_opt == 1"
-        class="col-span-6 m-5"
+        class="col-span-6 m-5 flex flex-row"
         x-data="{
           option: 1,
         }"
         id="accordion"
         x-cloak
-        class="flex flex-row"
       >
         <div>
           <button x-on:click="option = 1" class="min-w-full">
@@ -203,10 +202,54 @@
       </div>
 
       <!-- button -->
+      <div x-show="glob_opt == 3" class="col-span-6">
+        <div class="widget mb-4">
+          <h1 class="text-2xl">Widget Buttons</h1>
+          <button
+            class="bg-gray-200 py-1 px-4 rounded-md hover:cursor-pointer hover:bg-gray-300"
+          >
+            A button element
+          </button>
+
+          <input
+            class="bg-gray-200 py-1 px-4 rounded-md hover:cursor-pointer hover:bg-gray-300"
+            type="submit"
+            value="A submit button"
+          />
+
+          <a
+            class="bg-gray-200 py-1 px-4 rounded-md hover:cursor-pointer hover:bg-gray-300"
+            href="#"
+          >
+            An anchor
+          </a>
+        </div>
+        <h1 class="text-2xl">CSS Buttons</h1>
+        <button
+          class="bg-gray-200 py-1 px-4 rounded-md hover:cursor-pointer hover:bg-gray-300"
+        >
+          A button element
+        </button>
+
+        <input
+          class="bg-gray-200 py-1 px-4 rounded-md hover:cursor-pointer hover:bg-gray-300"
+          type="submit"
+          value="A submit button"
+        />
+
+        <a
+          class="bg-gray-200 py-1 px-4 rounded-md hover:cursor-pointer hover:bg-gray-300"
+          href="#"
+        >
+          An anchor
+        </a>
+      </div>
+
+      <!-- checkbox & radio -->
+
     </div>
 
     <script>
-
       // for autocomplete
       function onSearch(search, tag) {
         if (tag.toLowerCase().includes(search.toLowerCase())) return tag;
