@@ -19,7 +19,7 @@
     <!-- root div -->
     <div
       x-data="{
-        glob_opt: 6,
+        glob_opt: 9,
       }"
       class="grid grid-cols-8 gap-4 m-5"
     >
@@ -319,6 +319,22 @@
           Date:
           <input type="date" style="border: 2px solid gray" />
         </p>
+      </div>
+
+      <!-- progress bar -->
+      <div x-show="glob_opt == 9" class="col-span-6">
+        <div
+          class="bg-white w-96 h-10 rounded-md absolute"
+          style="border: 2px solid gray"
+        ></div>
+        <div
+          class="bg-gray-300 w-32 h-10 rounded-md relative"
+          style="
+            border-top: 2px solid gray;
+            border-left: 2px solid;
+            border-bottom: 2px solid gray;
+          "
+        ></div>
       </div>
     </div>
 
