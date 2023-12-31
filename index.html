@@ -19,7 +19,7 @@
     <!-- root div -->
     <div
       x-data="{
-        glob_opt: 4,
+        glob_opt: 6,
       }"
       class="grid grid-cols-8 gap-4 m-5"
     >
@@ -246,10 +246,7 @@
       </div>
 
       <!-- checkbox & radio -->
-      <div 
-        x-show="glob_opt == 4"
-        class="col-span-6"
-      >
+      <div x-show="glob_opt == 4" class="col-span-6">
         <h1 class="text-2xl mb-2">Checkbox and radio button widgets</h1>
 
         <h2 class="text-xl mb-1">Radio Group</h2>
@@ -312,6 +309,16 @@
             />
           </label>
         </fieldset>
+      </div>
+
+      <!-- control group -->
+
+      <!-- datepicker -->
+      <div x-show="glob_opt == 6" class="col-span-6">
+        <p>
+          Date:
+          <input type="date" style="border: 2px solid gray" />
+        </p>
       </div>
     </div>
 
