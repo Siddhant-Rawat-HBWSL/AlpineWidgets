@@ -19,7 +19,7 @@
     <!-- root div -->
     <div
       x-data="{
-        glob_opt: 5,
+        glob_opt: 7,
       }"
       class="grid grid-cols-8 gap-4 m-5"
     >
@@ -340,14 +340,18 @@
             <label for="insurance">Insurance</label>
             <input type="checkbox" id="insurance" />
             <label for="horizontal-spinner"># of cars</label>
-            <input id="horizontal-spinner" class="border border-solid border-gray-400" type="number" />
+            <input
+              id="horizontal-spinner"
+              class="border border-solid border-gray-400"
+              type="number"
+            />
             <button class="btn bg-blue-600 text-white">Book Now!</button>
           </div>
         </fieldset>
         <br />
         <fieldset>
           <legend>Rental Car</legend>
-          <div >
+          <div>
             <select>
               <option>Compact car</option>
               <option>Midsize car</option>
@@ -372,7 +376,11 @@
             <label for="insurance-v">Insurance</label>
             <input type="checkbox" id="insurance-v" />
             <label for="vertical-spinner"># of cars</label>
-            <input id="vertical-spinner" class="border border-solid border-gray-400" type="number" />
+            <input
+              id="vertical-spinner"
+              class="border border-solid border-gray-400"
+              type="number"
+            />
             <button class="btn bg-blue-600 text-white">Book Now!</button>
           </div>
         </fieldset>
@@ -385,6 +393,28 @@
           <input type="date" style="border: 2px solid gray" />
         </p>
       </div>
+
+      <!-- dialog -->
+      <div x-show="glob_opt == 7" class="col-span-6" x-data="{open: true}">
+        <template x-if="open">
+          <div style="width: 30%" class="border border-solid border-gray-400">
+            <div class="flex justify-between bg-gray-300 p-2">
+              <h2>Basic Dialog</h2>
+              <button class="btn bg-white px-1" x-on:click="open = !open">
+                x
+              </button>
+            </div>
+
+            <p class="p-2">
+              This is the default dialog which is useful for displaying
+              information. The dialog window can be moved, resized and closed
+              with the &apos;x&apos; icon.
+            </p>
+          </div>
+        </template>
+      </div>
+
+      <!-- menu -->
 
       <!-- progress bar -->
       <div x-show="glob_opt == 9" class="col-span-6">
