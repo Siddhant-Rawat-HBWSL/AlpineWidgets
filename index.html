@@ -19,7 +19,7 @@
     <!-- root div -->
     <div
       x-data="{
-        glob_opt: 7,
+        glob_opt: 12,
       }"
       class="grid grid-cols-8 gap-4 m-5"
     >
@@ -415,6 +415,44 @@
       </div>
 
       <!-- menu -->
+      <div x-show="glob_opt == 8" class="col-span-6">
+        <ul>
+          <li><div>Toys (n/a)</div></li>
+          <li><div>Books</div></li>
+          <li><div>Clothing</div></li>
+          <li>
+            <div>Electronics</div>
+            <ul>
+              <li><div>Home Entertainment</div></li>
+              <li><div>Car Hifi</div></li>
+              <li><div>Utilities</div></li>
+            </ul>
+          </li>
+          <li><div>Movies</div></li>
+          <li>
+            <div>Music</div>
+            <ul>
+              <li>
+                <div>Rock</div>
+                <ul>
+                  <li><div>Alternative</div></li>
+                  <li><div>Classic</div></li>
+                </ul>
+              </li>
+              <li>
+                <div>Jazz</div>
+                <ul>
+                  <li><div>Freejazz</div></li>
+                  <li><div>Big Band</div></li>
+                  <li><div>Modern</div></li>
+                </ul>
+              </li>
+              <li><div>Pop</div></li>
+            </ul>
+          </li>
+          <li><div>Specials (n/a)</div></li>
+        </ul>
+      </div>
 
       <!-- progress bar -->
       <div x-show="glob_opt == 9" class="col-span-6">
@@ -515,6 +553,43 @@
       </div>
 
       <!-- spinner -->
+      <div x-show="glob_opt == 12" class="col-span-6" x-data="{disable: false}">
+        <p>
+          <label for="spinner">Select a value:</label>
+          <input
+            id="spinner"
+            name="value"
+            type="number"
+            class="border border-solid border-gray-400"
+          />
+        </p>
+
+        <p>
+          <button
+            class="bg-gray-200 rounded-md p-2 m-2 border border-solid border-gray-400"
+          >
+            Toggle disable/enable
+          </button>
+          <button
+            class="bg-gray-200 rounded-md p-2 m-2 border border-solid border-gray-400"
+          >
+            Toggle widget
+          </button>
+        </p>
+
+        <p>
+          <button
+            class="bg-gray-200 rounded-md p-2 m-2 border border-solid border-gray-400"
+          >
+            Get value
+          </button>
+          <button
+            class="bg-gray-200 rounded-md p-2 m-2 border border-solid border-gray-400"
+          >
+            Set value to 5
+          </button>
+        </p>
+      </div>
 
       <!-- tabs -->
       <div
@@ -527,21 +602,21 @@
         <ul>
           <button
             x-on:click="opt = 1"
-            x-bind:class="opt == 1 ? 'bg-blue-600 text-white' : ''"
+            x-bind:class="opt == 1 ? 'bg-blue-700 text-white' : ''"
             class="px-3 py-2 bg-gray-200 rounded m-3"
           >
             Nunc tincidunt
           </button>
           <button
             x-on:click="opt = 2"
-            x-bind:class="opt == 2 ? 'bg-blue-600 text-white' : ''"
+            x-bind:class="opt == 2 ? 'bg-blue-700 text-white' : ''"
             class="px-3 py-2 bg-gray-200 rounded m-3"
           >
             Proin dolor
           </button>
           <button
             x-on:click="opt = 3"
-            x-bind:class="opt == 3 ? 'bg-blue-600 text-white' : ''"
+            x-bind:class="opt == 3 ? 'bg-blue-700 text-white' : ''"
             class="px-3 py-2 bg-gray-200 rounded m-3"
           >
             Aenean lacinia
